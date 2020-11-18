@@ -1,0 +1,34 @@
+<div class="padding_Left20px padding_Right20px padding_Top20px padding_Bottom20px">
+
+  <div [formGroup]="cardForm">
+    <div class="row margin_bottom15px">
+      <div class="col l4 s4 m4 x4 form-filed card_name">
+        <label>CARD NAME</label>
+        <input class="card_input" auxoInput kendoTextBox formControlName="cardName" type="text"
+          (keyup.enter)="onSave()" />
+      </div>
+
+      <div class="col l8 s8 m8 x8 form-filed">
+        <input class="card_desc" auxoInput kendoTextBox formControlName="cardDesc" type="text" />
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row margin_top20px margin_bottom_0 utiliti_add_btns">
+    <div class="addComment">
+      <button mat-button type="button"  (click)="addComment()">Add
+        Comment</button>
+        <button mat-button type="button" class= "back_button" (click)="onCancel()"> Back To Main Screen</button>
+    </div>
+
+
+    <div class="addComment">
+      <div *ngFor="let comment of comments">
+        {{comment}}
+      </div>
+    </div>
+  </div>
+
+
+</div>
