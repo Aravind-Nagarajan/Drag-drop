@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-import { Board } from '../../models/board.model';
-import { Column } from '../../models/column.model';
+import { Board } from '../../app/models/board.model';
+import { Column } from '../../app/models/column.model';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-card',
